@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Offside&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    $color-secondary: #EBB03E;
+}
+
+body {
+    font-family: 'Offside', cursive;
+    background-color: $color-black;
+    background-image: url('../image/space-dusk-background.png');
+    color: #ffffff ;
+    overflow-x: hidden;
+    background-size: 100%;
+    background-blend-mode: hard-light;
+
+    @media screen and(max-width: 900px) {
+       background-blend-mode: normal; 
+       background-repeat: repeat;
+       background-size: 200%;
+    }
+//    transition: all .5s ease ;
+//    animation: spaceBackground 40s linear infinite;
+}
+
+
+
+.content.loaded {
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+
+.content {
+    display: none;
+}
+
+
+
+.section {
+    // transform: scale(0, .025);
+    opacity: 0;
+}
+
+// section sambutan
+#planet-cincin-1 {
+    position: absolute;
+    top: -20%;
+
+    @media only screen and(max-width: 900px){
+        display: none;
+    }
+}
+
+.sambutan {
+    // background: rgba(0,0,0,.4);
+    background: linear-gradient(100.45deg, rgba(250, 252, 255, 0.2967) 7.8%, rgba(255, 255, 255, 0.0414) 85.61%);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    padding: 10rem 5rem;
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif; 
+    transition: all 1s ease;
+
+    & .desktop {
+        @media screen and(max-width: 900px){
+            display: none;
+        }
+    }
+
+    & .mobile {
+        display: none;
+        
+        @media screen and(max-width: 900px){
+            display: block;
+        }
+    }
+   
+}
+
+.sambutan__image img {
+    width: 300px;
+}
+
+
+
+.move-in {
+    animation: move-in 1s linear;
+    transform: scale(1, 1);
+    opacity: 1;
+}
+
+// END SECTION SAMBUTAN
+
+// section teeaser
+
+.teaser {
+    margin: 20rem 0;
+    padding: 0 10rem;
+
+    @media screen and(max-width: 600px){
+        padding: 0 3rem;
+    }
+
+    & iframe {
+        height: 900px;
+
+        @media screen and(max-width: 900px){
+            height: 700px;
+        }
+        @media screen and(max-width: 600px){
+            height: 400px;
+        }
+    }
+}
+
+// END SECTION TEASER
+
+// section ukm
+
+#ukm div.d-flex {
+    width: 23%;
+}
+
+
+#ukm {
+
+    & div.d-flex .button{
+        margin: 0 2rem;
+        transition: all .5s ease;
+
+        @media screen and(max-width: 375px){
+            margin: 0 .8rem;
+        }
+
+        @media screen and(max-width: 320px){
+            margin: 0 .5rem;
+        }
+    }
+    
+    & #ukm-radio:checked ~ div > label[for="ukm-radio"],
+    & #bso:checked ~ div > label[for="bso"],
+    & #lk:checked ~ div > label[for="lk"]
+    {
+        background-color: $color-secondary;
+        color: $color-black;
+    }
+
+    & input {
+        display: none;
+    }
+
+    & .display-ukm {
+        margin: 10rem auto;
+    }
+
+    
+    & .display-ukm > .ukm,
+    & .display-ukm > .bso,
+    & .display-ukm > .lk {
+        // display: none;
+        transition: all .5s ease;
+        height: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-50rem);
+    }
+
+
+    & #ukm-radio:checked ~ .display-ukm > .ukm, 
+    & #bso:checked ~ .display-ukm > .bso, 
+    & #lk:checked ~ .display-ukm > .lk {
+        // display: block;
+        height: auto;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+// END SECTION ukm
+
+// SECTION SPONSOR N MEDPART
+
+#sponsor-n-medpart {
+    margin: 20rem 0;
+    padding: 0 10rem;
+
+    @media screen and(max-width: 600px){
+        padding: 0 3rem;
+    }
+
+    & .container {
+        border-radius: 50px;
+        background-color: #fff;
+        height: 400px;
+
+        // @media screen and(max-width: 900px){
+        //     height: 700px;
+        // }
+        // @media screen and(max-width: 600px){
+        //     height: 400px;
+        // }
+    }
+}
+
+// END SECTION ukm
+
+
+@media screen and(max-width: 900px){
+    nav#navbar .navbar-nav {
+        margin: 0;
+    }
+}

@@ -1,0 +1,39 @@
+.form-modal {
+    position: fixed;
+    width: 60vw;
+    height: 80vh;
+    top: 50%;
+    left: 50%;
+    border-radius: 2rem;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,.7);
+    overflow: hidden;
+    & h1 {
+        font-size: 4rem;
+    }
+    &__image {
+        background-image: url('../image/background-form.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        & img {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 15rem;
+        }
+    }
+
+
+    &__form {
+        padding: 10rem 5rem;
+        position: relative;
+        & input {
+            font-size: 2.5rem;
+            padding: 1rem 2rem;
+            border-radius: .5rem;
+        }
+    }
+}

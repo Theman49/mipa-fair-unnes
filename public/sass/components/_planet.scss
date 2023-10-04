@@ -1,0 +1,87 @@
+.planet {
+    &--big {
+        transition: all .5s ease;
+        position: absolute;
+        width: 180rem;
+        @include box-shadow-planet-big;
+        display: inline-block;
+        transition: all;
+        animation: planetRotation-reverse 180s linear infinite;
+        right: -30rem;
+        top: 15%;
+        z-index: -1;
+
+        @media screen and(max-width: 1440px){
+            width: 150rem;
+            // top: 15%;
+        }
+        @media screen and(max-width: 1024px){
+            width: 120rem;
+            // top: 15%;
+        }
+        @media screen and(max-width: 900px){
+            width: 100rem;
+            // top: 15%;
+        }
+        @media screen and(max-width: 600px){
+            width: 60rem;
+            right: -20rem;
+            top: 10%;
+        }
+    }
+
+    &--small {
+        transition: all .5s ease;
+        position: absolute;
+        top: -20rem;
+        left: -15rem;
+        width: 80rem;
+        @include box-shadow-planet-small;
+        display: inline-block;
+        transition: all;
+        animation: planetRotation 100s linear infinite;
+        @media screen and(max-width: 1440px){
+            width: 60rem;
+            transform: translate(-5%, -5%);
+        }
+        @media screen and(max-width: 1024px){
+        }
+        @media screen and(max-width: 900px){
+            width: 50rem;
+            top: -5rem;
+        }
+        @media screen and(max-width: 600px){
+            width: 40rem;
+            transform: translate(-5%, -5%);
+        }
+    }
+
+    &--orange {
+        transition: all .5s ease;
+        position: absolute;
+        left: -30rem;
+        // bottom: -30rem;
+        width: 80rem;
+        // @include box-shadow-planet-small;
+        display: inline-block;
+        transition: all;
+        animation: planetRotation 100s linear infinite;
+        z-index: -1;
+        @media screen and(max-width: 1440px){
+            width: 60rem;
+            transform: translate(-5%, -5%);
+        }
+        @media screen and(max-width: 1024px){
+        }
+        @media screen and(max-width: 900px){
+            width: 50rem;
+            // top: -5rem;
+        }
+        @media screen and(max-width: 600px){
+            width: 40rem;
+            left: -15rem;
+            bottom: -15rem;
+            // transform: translate(-5%, -5%);
+        }
+    }
+}

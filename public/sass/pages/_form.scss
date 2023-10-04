@@ -1,0 +1,96 @@
+.form {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    & h1 {
+        font-size: 4rem;
+        letter-spacing: 1rem;
+    }
+    &__image {
+        background-image: url('../image/background-form.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+
+        & img {
+            position: absolute;
+            top: 50vh;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 15rem;
+            transition: all 5s ease;
+            animation: blink 5s linear infinite;
+
+            @media screen and(max-width: 900px){
+                height: 12rem;
+            }
+        }
+    }
+
+
+    &__form {
+        padding: 5rem 20rem;
+        position: relative;
+        height: 100vh;
+        overflow-y: auto;
+        @media screen and(max-width: 1024px){
+            padding: 3rem 10rem;
+        }
+        @media screen and(max-width: 900px){
+            padding: 3rem 5rem;
+        }
+        & label.button {
+            border: 5px solid #162A4F;
+
+            &:hover {
+                transform: translateY(0);
+                box-shadow: none;
+                cursor: pointer;
+            }
+        }
+
+        & label.button:first-child {
+            border-radius: 10px 0 0 10px;
+        }
+
+        & label.button:last-child {
+            border-radius: 0 10px 10px 0;
+        }
+
+        & input {
+            font-size: 2rem;
+            padding: 1rem 2rem;
+            border-radius: .5rem;
+        }
+
+        & #umum:checked + div > label[for="umum"] {
+            background-color: #162A4F;
+            color: #fff;
+        }
+
+        & #fmipa:checked ~ div > label[for="fmipa"] {
+            background-color: #162A4F;
+            color: #fff;
+        }
+
+        & form#formUmum,
+        & form#formFmipa {
+            // display: none;
+            transition: all .5s ease;
+            height: 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(50rem);
+        }
+
+
+        & #umum:checked ~ form#formUmum, 
+        & #fmipa:checked ~ form#formFmipa {
+            // display: block;
+            height: auto;
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+    }
+}

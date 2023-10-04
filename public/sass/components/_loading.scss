@@ -1,0 +1,56 @@
+.loading {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    transition: all 1s ease-out;
+    z-index: 10000;
+
+    &__image {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20rem;
+        height: 20rem;
+        background-image: url('../image/planet-small.png');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        animation: planetRotation 5s linear infinite;
+
+        @media screen and(max-width: 600px){
+            // width: 100rem;
+            top: 30%;
+            transform: translate(-100%,-50%);
+            left: 30%;
+        }
+        @media screen and(max-width: 600px){
+            // width: 60rem;
+            // right: -20rem;
+            // top: 10%;
+        }
+    }
+
+    & h1 {
+        display: inline-block;
+        position: absolute;
+        top: 70%;
+        left: 43%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+        animation: typing 5s linear infinite;
+        font-size: 5rem;
+
+        @media screen and(max-width: 1440px){
+            left: 30%;
+        }
+        @media screen and(max-width: 600px){
+            left: 50%;
+        }
+    }
+    &__blink {
+        animation: typing-blink .5s infinite;
+    }
+
+}

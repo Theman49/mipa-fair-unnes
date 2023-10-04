@@ -1,0 +1,45 @@
+nav#navbar {
+    font-size: 2rem;
+    padding: 1rem 5rem;
+    background-color: #03020D;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 10001;
+    &.navbar-light {
+        background: #fff;
+    }
+
+    @media screen and(max-width: 320px){
+        padding: .5rem;
+    }
+
+    & .navbar-brand {
+        @media screen and(max-width: 320px){
+            width: 40%;
+        }
+    }
+    
+    & .navbar-nav {
+        margin-left: 45rem;
+
+        @media  screen and(max-width: 1440px) {
+        margin-left: 20rem; 
+        }
+        @media  screen and(max-width: 1024px) {
+        margin-left: 10rem; 
+        }   
+
+        & li.nav-item{
+            margin-right: 8rem;
+            @media screen and(max-width: 900px){
+                margin-right: 0;
+                margin-bottom: 1rem;
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+

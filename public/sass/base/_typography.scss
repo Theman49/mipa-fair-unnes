@@ -1,0 +1,19 @@
+.heading {
+    &-title {
+        font-size: 5.6rem;
+        letter-spacing: 10px;
+        font-weight: 600;
+
+        
+        @media screen and(max-width: 600px){
+            font-size: 3rem;
+        }
+        @media screen and(max-width: 320px){
+            font-size: 2rem;
+            letter-spacing: 5px;
+        }
+    }
+    &-primary {
+        font-size: 10rem;
+    }
+}

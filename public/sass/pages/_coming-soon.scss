@@ -1,0 +1,43 @@
+#coming-soon {
+    & > div {
+        transition: all 1s ease;
+        position: relative;
+        background-image: url("../image/space-dusk-background-move.png");
+        background-size: auto 100%;
+        background-repeat: repeat;
+        animation: move-bg 50s linear infinite;
+        -webkit-animation: move-bg 50s linear infinite;
+
+        & > div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: start-rocket 6s linear, moving-rocket 12s linear infinite;
+            -webkit-animation: start-rocket 6s linear, moving-rocket 12s linear infinite;
+
+            & h1 {
+                font-size: 3rem;
+                transform: translateY(10rem);
+                animation: typing-coming-soon 5s linear infinite;
+                -webkit-animation: typing-coming-soon 5s linear infinite;
+                overflow: hidden;
+                font-style: italic;
+                white-space: nowrap;
+            }
+
+            & img {
+                width: 20rem;
+                transform: rotate(90deg);
+
+                @media only screen and(max-width: 425px){
+                    width: 15rem;
+                    margin-top: 3rem;
+                }
+            }
+
+
+        }
+
+    }
+}

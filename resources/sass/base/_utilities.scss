@@ -1,0 +1,26 @@
+.u-absolute-right {
+    top: 0;
+    right: 0;
+
+    &--top {
+        &-big {
+            top: 50%;
+        }
+        
+    }
+    &--minus {
+        &-medium {
+            right: -15%;
+        }
+        
+    }
+}
+
+.u-fullscreen-fixed {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.7);
+}

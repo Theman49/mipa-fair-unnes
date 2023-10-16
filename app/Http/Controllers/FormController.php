@@ -52,6 +52,7 @@ class FormController extends Controller
     }
 
     public function direct($target='beranda'){
+	$data['url'] = 'http://localhost:8000';
         $data['random'] = time()+rand();
         $data['target'] = $target;
         return view('local-storage', $data);

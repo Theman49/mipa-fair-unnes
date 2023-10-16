@@ -5,17 +5,17 @@
 
         idSession = localStorage.getItem('id_session');
         
-        $.post('http://127.0.0.1:8000/cek-session', {id_session: idSession, _token : '{{ csrf_token() }}'}, function(data){
+        $.post('{{ $url }}/cek-session', {id_session: idSession, _token : '{{ csrf_token() }}'}, function(data){
             console.log(data);
             alert("Selamat Datang di MIPA FAIR UNNES 2021");
-            document.location.href = 'http://127.0.0.1:8000/form';
+            document.location.href = '{{ $url }}/form';
         })
     }else{
         idSession = localStorage.getItem('id_session');
         
-        $.post('http://127.0.0.1:8000/cek-session', {id_session: idSession, _token : '{{ csrf_token() }}'}, function(data){
+        $.post('{{ $url }}/cek-session', {id_session: idSession, _token : '{{ csrf_token() }}'}, function(data){
             console.log(data);
-            document.location.href = 'http://127.0.0.1:8000/{{ $target }}';
+            document.location.href = '{{ $url }}/{{ $target }}';
         })
     }
 </script>
